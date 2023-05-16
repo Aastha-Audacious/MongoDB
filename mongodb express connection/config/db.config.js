@@ -1,0 +1,5 @@
+const cl = require('cli-color')
+const mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost:27017/mongo_db')
+    .then(()=> console.log( cl.bgGreen("Database connected successfully")))
+    .catch(()=> console.log(cl.bgRed("error while connecting")))
